@@ -1,0 +1,299 @@
+/* Reset de Estilos */
+body,
+h1,
+h2,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #00473e;
+    color: #333333;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    /* Esto alinea los elementos en los extremos */
+    align-items: center;
+    /* Esto alinea verticalmente los elementos */
+    background-color: #f2f7f5;
+    padding: 10px 20px;
+}
+
+.cabecera h1 {
+    margin: 0;
+    color: #00473e;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 45px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    color: #f9bc60;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+}
+.animate {
+    transition: color 0.3s ease; /* Transición suave de 0.3 segundos para el cambio de color */
+}
+
+.animate:hover {
+    color: #df8600; /* Cambia el color del texto a rojo cuando el cursor está sobre él */
+}
+#collapseAcercaDe {
+    position: fixed;
+    top: 20%;
+    /* Ajusta la posición vertical */
+    left: 85%;
+    /* Ajusta la posición horizontal */
+    transform: translate(-50%, -50%);
+    /* Centra el cuadro de texto */
+    z-index: 9999;
+    /* Asegura que esté por encima de otros elementos */
+    /* Cambia el color de fondo del cuadro de texto */
+
+    /* Cambia el tamaño del texto */
+}
+
+#collapseAcercaDe .card {
+    background-color: #07070786;
+    color: #fffffe;
+    font-family: "Catamaran", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-size: 16px;
+}
+
+.content-principal {
+    position: relative;
+    overflow: hidden;
+    /* Oculta cualquier desbordamiento de la imagen */
+}
+
+.content-principal img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Evita espacios adicionales debajo de la imagen */
+    filter: brightness(70%) contrast(120%);
+    /* Aplica un filtro de color negro transparente */
+    margin-bottom: 50px;
+}
+
+@keyframes mover-imagen {
+    0%, 100% { transform: translateX(0); } /* Inicia y termina en la posición original */
+    50% { transform: translateX(-0.5%); } /* Mueve la imagen ligeramente hacia la izquierda */
+}
+
+.animated-image {
+    width: 200%; /* Duplica el ancho de la imagen */
+    height: auto; /* Mantiene la relación de aspecto */
+    transform-origin: left;
+    animation: mover-imagen 4s linear infinite; /* Aplica la animación con un ciclo infinito */
+}
+
+.image-container {
+    position: relative;
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    height: auto; /* Ajusta la altura automáticamente */
+    overflow: hidden; /* Oculta el desbordamiento de la imagen */
+}
+
+.refe .content-principal {
+    position: relative; /* Asegura que el contenedor de la imagen tenga posición relativa */
+}
+
+
+.texto-superpuesto {
+    position: absolute;
+    top: 25%;
+    /* Ajusta la posición verticalmente */
+    left: 25%;
+    /* Ajusta la posición horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Centra el texto */
+    background-color: rgba(0, 0, 0, 0);
+    /* Fondo semitransparente */
+    color: #ffffff;
+    /* Color del texto */
+    padding: 20px;
+    text-align: left;
+}
+.animate-entrada {
+    opacity: 0; /* Inicialmente oculta los elementos */
+    transform: translateX(100%); /* Los mueve fuera de la pantalla hacia la derecha */
+    animation: aparecer-desde-la-derecha 1s forwards; /* Define la animación y la duración */
+}
+
+@keyframes aparecer-desde-la-derecha {
+    to {
+        opacity: 1; /* Hace que los elementos sean visibles */
+        transform: translateX(0); /* Los devuelve a su posición original */
+    }
+}
+.imgtext1 {
+    font-size: 15px;
+    /* Tamaño de fuente para h1 */
+}
+
+.imgtext2 {
+    font-size: 42px;
+    /* Tamaño de fuente para h2 */
+}
+
+.prev {
+    color: #fffffe;
+    /* Cambia el color del texto del título */
+    font-size: 60px;
+    /* Cambia el tamaño de la fuente del título */
+    margin-bottom: 70px;
+    /* Agrega un margen inferior para separar el título de los cards */
+    text-align: center;
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.prev:hover {
+    transform: scale(1.1); /* Aplica un aumento del 10% al texto cuando se pasa el cursor sobre él */
+}
+
+.card {
+    font-size: 16px;
+    /* Ajusta el tamaño de fuente del texto dentro de la tarjeta */
+    background-color: #f2f7f5;
+    /* Establece el color de fondo de la tarjeta */
+    width: 400px;
+    /* Define un ancho específico para la tarjeta */
+    height: auto;
+    /* Ajusta automáticamente la altura según el contenido */
+    margin-left: 35px;
+}
+
+/* Si deseas aplicar estilos específicos de tamaño de fuente y color de fondo a los títulos de la tarjeta */
+.card-title {
+    font-size: 20px;
+    /* Ajusta el tamaño de fuente del título de la tarjeta */
+    color: #00473e;
+    /* Cambia el color del texto del título */
+    font-family: "Cabin", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+/* Si deseas aplicar estilos específicos de tamaño de fuente y color de fondo al cuerpo de la tarjeta */
+.card-body {
+    font-size: 14px;
+    /* Ajusta el tamaño de fuente del cuerpo de la tarjeta */
+    color: #475d5b;
+    /* Cambia el color del texto del cuerpo de la tarjeta */
+}
+
+.text-body-secondary {
+    color: #ffffff;
+    /* Cambia el color de la fuente de la ubicación */
+}
+
+/* Estilos de Pie de Página */
+.pie {
+    background-color: #fff8f8;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.chat_icon {
+    position: fixed;
+    right: 30px;
+    bottom: 0;
+    font-size: 80px;
+    color: #0000;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.chat_box {
+    position: fixed;
+    right: 35px;
+    bottom: 100px;
+    width: 450px;
+    height: 80vh;
+    background: #dedede;
+    z-index: 1000;
+    transition: all 0.3s ease-out;
+    transform: scaleY(0);
+}
+
+.chat_box.active {
+    transform: scaleY(1);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.conv-form-wrapper textarea {
+    height: 10px;
+    overflow: hidden;
+    resize: none;
+
+}
+
+#messages {
+    overflow-y: auto;
+    height: calc(100% - 50 px);
+}
+
+.footer {
+    background-color: #f2f2f2;
+    padding: 50px 0;
+    color: #666;
+    font-size: 14px;
+    text-align:lefts;
+    margin-top: 50px;
+}
+
+.footer h3 {
+    color: #333;
+}
+
+.footer p {
+    margin-bottom: 20px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer ul li:last-child {
+    margin-right: 0;
+}
